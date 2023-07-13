@@ -1,12 +1,13 @@
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
 public class BaseTest {
 
-    ChromeDriver driver;
+    WebDriver driver;
 
-    public ChromeDriver openBrowser()
+    public  ChromeDriver openBrowser()
     {
         ChromeDriver driver = new ChromeDriver();
         driver.navigate().to("https://gigatron.rs/");
