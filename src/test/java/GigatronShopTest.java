@@ -1,4 +1,5 @@
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -19,9 +20,9 @@ public class GigatronShopTest extends BaseTest{
     @Test
     public void ShopTest(){
 
-        popUpPage.clickOnPopup();
-        popUpPage.clickPrihavti();
         homePage.inputSearch("Samsung");
+
+        Assert.assertEquals(homePage.getResult.isDisplayed(),true,"SAMSUNG Galaxy S23 8/128GB Cream is displayed");
     }
 
     @AfterMethod
